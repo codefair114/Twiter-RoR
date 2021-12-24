@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/AlexandraChiritaACS">
+  <a href="https://github.com/codefair114">
     <img src="https://i.ibb.co/r0bw6WR/favicon-1.png" alt="Logo" width="80" height="80">
   </a>
 
