@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tweeet:</strong>
+  <%= @tweeet.tweeet %>
+</p>
+
+<%= link_to 'Edit', edit_tweeet_path(@tweeet) %> |
+<%= link_to 'Back', tweeets_path %>
+<p><%= @tweeet.likes.count %> <%= (@tweeet.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+<% pre_like = @tweeet.likes.find { |like| like.user_id == current_user.id} %>
+<% if pre_like %>
+  <%= button_to 'Unlike', tweeet_like_path(@tweeet, pre_like), method: :delete %>
+<% else %>
+  <%= button_to 'Like', tweeet_likes_path(@tweeet), method: :post %>
+<% end %>
